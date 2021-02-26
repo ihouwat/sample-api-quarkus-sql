@@ -1,0 +1,23 @@
+GET http://localhost:8080/list
+
+###
+
+POST http://localhost:8080/list
+content-type: application/json
+
+{
+    "item": "Apple"
+}
+
+###
+DELETE http://localhost:8080/list
+content-type: application/json
+
+{
+    "item": "Apple"
+}
+
+###
+
+PUT http://localhost:8080/list?item=Apple&updateditem=NewApple
+content-type: application/json
