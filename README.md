@@ -1,5 +1,5 @@
 # Sample API using Quarkus with SQL
-[Frontend repo for API]()https://github.com/ihouwat/frontend-sample-api-quarkus-sql
+[Frontend repo for API](https://github.com/ihouwat/frontend-sample-api-quarkus-sql)
 
 ## 1a) Start PostgreSQL DB with:
 ```
