@@ -14,14 +14,15 @@ public interface ListService extends PanacheRepository<ListItem> {
     public List<ListItem> getList();
 
     @POST
-    public Response addItem(ListItem item);
+    public Response addItem(String item);
 
     @PUT
-    public Response updateItem(@QueryParam("item") ListItem oldItem,
-                               @QueryParam("updateditem") ListItem updatedItem);
+    public Response updateItem(@QueryParam("itemId") long id,
+                               @QueryParam("updatedItem") String updatedItem);
 
     @DELETE
-    public Response deleteItem(ListItem item);
+    @Path("/{id}")
+    public Response deleteItem(@PathParam("id") long id);
 
     default public ListItem findItem(String item) {
         return find("item", item).list().get(0);

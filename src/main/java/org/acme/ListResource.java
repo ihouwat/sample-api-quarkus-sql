@@ -9,8 +9,7 @@ import io.quarkus.hibernate.orm.panache.PanacheRepository;
 import javax.persistence.LockModeType;
 import javax.transaction.Transactional;
 import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
+import javax.ws.rs.core.*;
 import java.util.List;
 
 
@@ -26,22 +25,23 @@ public class ListResource implements ListService {
     }
 
     @Override
-    public Response addItem(ListItem item) {
+    public Response addItem(String input) {
+        ListItem item = new ListItem(input);
         item.persist();
         return Response.status(Response.Status.CREATED).entity(item).build();
     }
 
     @Override
-    public Response deleteItem(ListItem item) {
-        ListItem deletedEntity = findItem(item.getItem());
+    public Response deleteItem(long id) {
+        ListItem deletedEntity = findById(id);
         deletedEntity.delete();
-        return Response.status(Response.Status.OK).entity(deletedEntity).build();
+        return Response.status(Response.Status.CREATED).entity(deletedEntity).build();
     }
 
     @Override
-    public Response updateItem(ListItem oldItem, ListItem updatedItem) {
-        ListItem updatedEntity = findItem(oldItem.getItem());
-        updatedEntity.setItem(updatedItem.getItem());
+    public Response updateItem(long id, String updatedItem) {
+        ListItem updatedEntity = findById(id);
+        updatedEntity.setItem(updatedItem);
         return Response.status(Response.Status.CREATED).entity(updatedEntity).build();
     }
 
