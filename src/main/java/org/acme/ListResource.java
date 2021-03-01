@@ -35,14 +35,14 @@ public class ListResource implements ListService {
     public Response deleteItem(long id) {
         ListItem deletedEntity = findById(id);
         deletedEntity.delete();
-        return Response.status(Response.Status.CREATED).entity(deletedEntity).build();
+        return Response.status(Response.Status.OK).entity(deletedEntity).build();
     }
 
     @Override
     public Response updateItem(long id, String updatedItem) {
         ListItem updatedEntity = findById(id);
         updatedEntity.setItem(updatedItem);
-        return Response.status(Response.Status.CREATED).entity(updatedEntity).build();
+        return Response.status(Response.Status.OK).entity(updatedEntity).build();
     }
 
 }

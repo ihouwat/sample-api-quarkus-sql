@@ -1,3 +1,5 @@
+# For use with VS Code REST Client extension
+
 GET http://localhost:8080/list
 
 ###
@@ -8,10 +10,10 @@ content-type: application/json
 Apple
 
 ###
-DELETE http://localhost:8080/list/17
+DELETE http://localhost:8080/list/1
 content-type: application/json
 
 ###
 
-PUT http://localhost:8080/list?item=Apple&updatedItem=NewApple
+PUT http://localhost:8080/list?itemId=2&updatedItem=NewApple
 content-type: application/json
