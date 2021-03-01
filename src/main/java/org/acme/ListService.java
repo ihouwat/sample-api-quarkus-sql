@@ -7,8 +7,6 @@ import javax.ws.rs.core.Response;
 import java.util.List;
 
 public interface ListService extends PanacheRepository<ListItem> {
-//    private List<ListItem> list;
-//    int index;
 
     @GET
     public List<ListItem> getList();

@@ -1,7 +1,6 @@
 package org.acme;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
-import org.hibernate.ejb.HibernateEntityManager;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
