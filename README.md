@@ -37,3 +37,4 @@ Alternatively, test the API with the [frontend app](https://github.com/ihouwat/f
 - Hibernate ORM with Panache: Define your persistent model with Hibernate ORM and JPA
 - RESTEasy JAX-RS: REST endpoint framework implementing JAX-RS and more
 - PostgreSQL: Relational database
+- MySQL: Relational database
