@@ -5,6 +5,7 @@ import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import io.quarkus.hibernate.orm.panache.PanacheQuery;
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
+import io.quarkus.panache.common.Sort;
 
 import javax.persistence.LockModeType;
 import javax.transaction.Transactional;
@@ -20,9 +21,7 @@ import java.util.List;
 public class ListResource implements ListService {
 
     @Override
-    public List<ListItem> getList() {
-        return ListItem.listAll();
-    }
+    public List<ListItem> getList() {return ListItem.listAll(Sort.ascending("id"));}
 
     @Override
     public Response addItem(String input) {
