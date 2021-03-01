@@ -1,4 +1,4 @@
-# Sample API using Quarkus with SQL
+# API for To-Do list using Quarkus with SQL
 
 ## 1a. Start PostgreSQL DB with:
 ```
