@@ -1,5 +1,4 @@
 # Sample API using Quarkus with SQL
-Test the endpoints through the [frontend repo for the API](https://github.com/ihouwat/frontend-sample-api-quarkus-sql).
 
 ## 1a. Start PostgreSQL DB with:
 ```
@@ -29,8 +28,9 @@ This approach enables live coding:
 ```shell script
 ./mvnw compile quarkus:dev
 ```
-## 3. Connect to endpoint at
-http://localhost:8080/list
+## 3. Connect to server at
+http://localhost:8080/list \
+Alternatively, test the API with the [frontend app](https://github.com/ihouwat/frontend-sample-api-quarkus-sql).
 
 ## Technologies used
 - Quarkus
