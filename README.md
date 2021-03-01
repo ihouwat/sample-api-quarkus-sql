@@ -1,7 +1,7 @@
 # Sample API using Quarkus with SQL
-[Frontend repo for API](https://github.com/ihouwat/frontend-sample-api-quarkus-sql)
+Test the endpoints through the [frontend repo for the API](https://github.com/ihouwat/frontend-sample-api-quarkus-sql).
 
-## 1a) Start PostgreSQL DB with:
+## 1a. Start PostgreSQL DB with:
 ```
 docker run 
 --name quarkus-list-pg 
@@ -12,7 +12,7 @@ docker run
 postgres:10.5
 ```
 
-## 1b) Alternatively, start MySQL DB with:
+## 1b. Alternatively, start MySQL DB with:
 Make sure the right properties are active in application.properties file.
 ```
 docker run
@@ -23,13 +23,13 @@ docker run
 mysql:latest
 ```
 
-## 2) Running the app in dev mode
+## 2. Running the app in dev mode
 
 This approach enables live coding:
 ```shell script
 ./mvnw compile quarkus:dev
 ```
-## 3) Connect to endpoint at
+## 3. Connect to endpoint at
 http://localhost:8080/list
 
 ## Technologies used
